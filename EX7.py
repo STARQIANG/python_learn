@@ -25,3 +25,14 @@ print(cars)
 #向sort()方法传递参数 reverse=True,实现倒序
 cars.sort(reverse=True)
 print(cars)
+
+#使用函数 sorted()对列表进行临时排序
+
+print(sorted(cars))
+
+print(cars)
+cars.reverse()
+print(cars)
+
+print(len(cars))
+
