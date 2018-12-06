@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-#-*- coding: utf-8 -*-
+# !/usr/bin/env python
+# -*- coding: utf-8 -*-
 # import os
 # os.environ['PYTHON_EGG_CACHE'] = '/tmp/.python-eggs'
 # import sys,datetime,MySQLdb,socket,paramiko
