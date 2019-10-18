@@ -1,3 +1,4 @@
+#类
 class Dog():
     def __init__(self,name,age):
         """初始化属性name和age"""

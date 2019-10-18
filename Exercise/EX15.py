@@ -1,3 +1,4 @@
+#使用类和实例
 class Car():
     """一次模拟汽车的简单尝试"""
     def __init__(self, make, model, year):
