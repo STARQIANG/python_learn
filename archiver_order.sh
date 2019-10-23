@@ -66,9 +66,9 @@ do
 
     if [ $? -eq 0 ]; then
 
-    INSTER_COUNT=`grep "INSTER" ${LOG_FILE} | tail -n1 |awk '{print $2}'`
+    INSERT_COUNT=`grep "INSERT" ${LOG_FILE} | tail -n1 |awk '{print $2}'`
 
-    COUNT=`expr ${INSTER_COUNT} + 0`
+    COUNT=`expr ${INSERT_COUNT} + 0`
 
     echo -e "[${NOW_TIME}] [INFO] ${SOURCE_TAB}表的 updated_at < ${UP_DATA}的数据导入${DEST_TAB}表${COUNT}条！" | tee -a ${COUNT_LOG}
 
@@ -105,9 +105,9 @@ do
 
     if [ $? -eq 0 ]; then
 
-    INSTER_COUNT=`grep "INSTER" ${API_LOG_FILE} | tail -n1 |awk '{print $2}'`
+    INSERT_COUNT=`grep "INSERT" ${API_LOG_FILE} | tail -n1 |awk '{print $2}'`
 
-    COUNT=`expr ${INSTER_COUNT} + 0`
+    COUNT=`expr ${INSERT_COUNT} + 0`
 
     echo -e "[${NOW_TIME}] [INFO] ${SOURCE_TAB}表API用户updated_at < ${UP_DATA}的数据导入${DEST_TAB}表${COUNT}条！" | tee -a ${COUNT_LOG}
 
