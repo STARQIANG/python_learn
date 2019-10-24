@@ -39,10 +39,10 @@ if [ ! -d ${LOG_PATH} ];then
     mkdir ${LOG_PATH} -p
 fi
 
-LOG_FILE="${LOG_PATH}/order_history.log"
-API_LOG_FILE="${LOG_PATH}/api_order_history.log"
+LOG_FILE="${LOG_PATH}/archiver_order_${DAY_TIME}.log"
+API_LOG_FILE="${LOG_PATH}/api_archiver_order_${DAY_TIME}.log"
 
-COUNT_LOG="${LOG_PATH}/archiver_${SOURCE_TAB}.log"
+COUNT_LOG="${LOG_PATH}/archiver_order_history.log"
 
 #所有用户归档30天前订单；
 
@@ -109,7 +109,7 @@ do
 
     COUNT=`expr ${INSERT_COUNT} + 0`
 
-    echo -e "[${NOW_TIME}] [INFO] ${SOURCE_TAB}表API用户updated_at < ${UP_DATA}的数据导入${DEST_TAB}表${COUNT}条！" | tee -a ${COUNT_LOG}
+    echo -e "[${NOW_TIME}] [INFO] ${SOURCE_TAB}表API用户updated_at < ${API_UP_DATA}的数据导入${DEST_TAB}表${COUNT}条！" | tee -a ${COUNT_LOG}
 
     fi
 done
